@@ -7,7 +7,7 @@ hbs.registerPartials(__dirname +'/views/partials')
 
 var MongoClient = require('mongodb').MongoClient;
 
-var url = 'mongodb+srv://ducanh1610:duc123456@cluster0.9rpbx.mongodb.net/test';
+var url = 'mongodb+srv://ducanh1610:anhduc123@cluster0.9rpbx.mongodb.net/test';
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -160,7 +160,7 @@ app.post('/doEditUser',async(req,res)=>{
     let dbo = client.db("productDB");
     await dbo.collection("users").updateOne(condition,newValues);
     let results = await dbo.collection("users").find({}).toArray();
-    res.render('viewUsers',{model:results});
+    res.render('viewUser',{model:results});
     
 })
 

@@ -20,12 +20,12 @@
 </head>
 
 <body>
-    <center><h1>Edit Product</h1></center>
+    <center><h1>Edit User</h1></center>
     {{>footer}}
     <br>
-    <form action="/doEdit" method="post" class="box">
+    <form action="/doEditUser" method="post" class="box">
         <input type="hidden" name="id" value="{{model._id}}">
-        <h4>UserName::</h4> <input type="text" name="txtNameU" value="{{model.userName}}">
+        <h4>UserName::</h4> <input type="text" name="txtName" value="{{model.userName}}">
         <h4>Password:</h4> <input type="text" name="txtPassword" value="{{model.password}}">
         <br>
         <input type="submit" value="Update">
